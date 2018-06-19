@@ -28,7 +28,7 @@ class DummyLogger(Thread):
             else:
                 with open(self.tmp_file.name, "a") as fd:
                     _, _, sentence = generate_sentence()
-                    fd.write("\n{}".format(sentence.encode("ascii")))
+                    fd.write(u"\n{}".format(sentence.encode("ascii")))
                 pause = random.randint(1, 3)
                 time.sleep(pause)
 
